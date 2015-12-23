@@ -6,24 +6,25 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="styles/style.css"></link>
 	
-		<!-- Scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="scripts/scripts.js"></script>
 	</head>
 	<body>
 		<header>
 			<nav>
+				<img src="img/logo.png" />
 				<a href="#">Intro</a>
 				<a href="#">Publications</a>
 				<a href="#">Team</a>
 				<a href="#">Media</a>
 				<a href="#">Join Us</a>
-				<a id="contact" href="#">Contact</a>
+				<a href="#">Afiliations</a>
+				<a class="contactTrigger" href="#">Contact</a>
 			</nav>
-			<img class="hero" />
-			<p class="header__intro">AG May-Simera is working on the stuff and is learning more about the Cillia in the Eye every day. <a href="#">Find out more</a></p>
 		</header>
-		<section>
+		<section class="main">
+			<div id="intro">
+				<img class="hero" />
+				<p class="header__intro">AG May-Simera is working on the stuff and is learning more about it every day! <a href="#">Find out more</a></p>
+			</div><!-- /intro -->
 			<div id="media">
 				<!-- TODO setup link to videos -->
 			</div><!--/media -->
@@ -107,37 +108,38 @@
 				<div class="teamMember">
 					<h3 class="teamMember__name">Viola Kretschmer<span class="teamMember__name-title">Lab Manager</span></h3>
 					<img src="img/viola.png" />
-					<div class="temMemberBio">
-						<p>Some Fun bio stuff here</p>
-					</div>
 				</div><!-- /teamMember -->
 				<div class="teamMember">
 					<h3 class="teamMember__name">Viola Kretschmer<span class="teamMember__name-title">Lab Manager</span></h3>
 					<img src="img/helen.html" />
-					<div class="temMemberBio">
-						<p>Some Fun bio stuff here</p>
-					</div>
 				</div><!-- /teamMember -->
 			</div><!-- /team -->
 			<div id="join">
 				<h2>Join Us</h2>
 				<p>Join us and together we can rule the galaxy!</p>
-				<a href="#">Get in touch</a><!-- /open sidebar contact form -->
+				<a class="contactTrigger" href="#">Get in touch</a><!-- /open sidebar contact form -->
 			</div><!-- /join -->
+
+			<div id="affiliations">
+				<a href="#" target="_blank"></a>
+				<a href="#" target="_blank"></a>
+			</div><!-- /affiliations -->
 		</section>
 		<footer>
 			<nav>
 				<a href="#">Intro</a>
-				<a href="#">Media</a>
 				<a href="#">Publications</a>
 				<a href="#">Team</a>
+				<a href="#">Media</a>
 				<a href="#">Join Us</a>
+				<a href="#">Afiliations</a>
+				<a class="contactModal" href="#">Contact</a>
 			</nav>
 			<p class="footer__copy">&copy; AGMay-Simera 2016</p>
 		</footer>
 
 		<div id="contact" class="contact">
-			<form>
+			<a class="contact__close">X</a>
 				<div class="inputWrap">
 					<label>Name:</label>
 					<input type="text" id="name"/>
@@ -150,9 +152,12 @@
 					<label>Message:</label>
 					<textarea id="message"></textarea>
 				</div>
-				<button type="submit" value="Send Message"></button>
-				<p class="message">&nbps;</p>
-			</form>
+				<button id="contactFormSubmit" value="Send Message">Send Message</button>
+				<p class="message">&nbsp;</p>
 		</div><!-- contact modal -->
+
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="scripts/scripts.js"></script>
 	</body>
 </html>

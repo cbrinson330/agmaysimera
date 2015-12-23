@@ -11,8 +11,9 @@
 @import 'base/normalize';
 @import 'base/typography';
 
-// @import 'layout/*';
+@import 'layout/layout';
+@import 'layout/header';
 
-// @import 'components/*';
+@import 'components/contact';
 
 // @import 'pages/*';
