@@ -3,6 +3,40 @@ body {
 	//border-left: 20px solid #343838;
 	//border-right: 20px solid #343838;
 	//border-bottom: 20px solid #343838;
+
+  &.placeholder {
+    text-align: center;
+    color: #005F6B;
+
+    .nav__logo {
+      margin-bottom: 25px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 550px;
+      margin: 0 auto;
+
+      h2 {
+        clear: both;
+        margin-top: 45px;
+      }
+
+      .bio{
+        .intro{
+          font-size: 15px;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        .fl {
+          float: left;
+          margin-right: 15px;
+        }
+      }
+    }
+
+  }
 }
 
 .main {
