@@ -3,10 +3,13 @@
 		private $name;
 		private $email;
 		private $message;
-		private $returnMessage;
 		private $emailSent;
 		private $recipiant;
 		private $subject;
+		private $successMessage = 'Thank you for contacting us.';
+		private $emailErrorMessage = 'Please enter a valid email address.';
+		private $errorMessage = 'There was an issue sending your message. Please try again.';
+		private $returnMessage = array('message' => $this->errorMessage);
 	
 		function __construct($nameInit, $emailInit, $messageInit, $subjectInit, $recipiantInit) {
 			$this->name = $nameInit;
@@ -28,21 +31,31 @@
 			return emailBody;
 		}
 
+		private function printReturnMessage() {
+			echo json_encode($this->returnMessage);
+		}
+
 		public function sendForm(){
-			if(mail($this->recipiant, $this->subject, $this->getEmailBody())){
-				
+			if($this->isValidEmail()){
+				if(mail($this->recipiant, $this->subject, $this->getEmailBody())){
+					//Email Sent
+					$this->returnMessage['messsage'] = $this->successMessage;
+				}
+				else {
+					//Email Not Sent
+					$this->returnMessage['messsage'] = $this->errorMessage;
+				}
 			}
 			else {
-				
+				//not valid email
+				$this->returnMessage['message'] = $this->emailErrorMessage;
 			}
-		}
 		
-		public function printReturnMessage() {
-
+			//echo the return message 
+			$this->printReturnMessage();
 		}
 	}
 
 	$formSub = new formHandle($_POST['name'], $_POST['email'], $_POST['message'], 'Message From Website Contact Form', 'cbrinson330@gmail.com');
 	$formSub->sendForm();
-	$formSub->printReturnMessage();
 ?>
