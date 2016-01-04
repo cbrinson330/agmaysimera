@@ -1,7 +1,18 @@
 header {
 	position: fixed;
-	top: 15px;
+	top: 0;
 	width: 100%;
 	padding: 15px 0;
 	text-align: center;
+	border-top: 20px solid #343838;
+	background: #fff;
+	box-shadow: 5px 5px 5px #ccc;
+
+	nav {
+		background: #fff;
+		
+		a {
+			margin: 0 20px;
+		}
+	}
 }

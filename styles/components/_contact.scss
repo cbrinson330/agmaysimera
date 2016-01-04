@@ -2,11 +2,48 @@
 	position: fixed;
 	top: 0;
 	width: 250px;
-	right: 20px;
-	background: #ccc;
-}
+	//right: 20px;
+	right: -350px;
+	width: 350px;
+	background: #343838;
+	padding: 15px;
+	color: #fff;
+	border-left: 1px solid #a8a8a8;
+	transition: all, .5s;
+	-webkit-transition: all, .5s;
 
-.contact label {
-	display: block;
-	text-transform: uppercase;
+	&.open {
+		right: 20px;
+	}
+
+	@media screen and (max-width:480) {
+		right: -300px;
+		width: 300px;
+	}
+
+	label {
+		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	input, textarea {
+		width: 100%;
+	}
+
+	.contact__close {
+		float: right;
+		font-weight: bold;
+		font-size: 16px;
+		color: #00B4cc;
+	}
+
+	button {
+		border: none;
+		background-color: #00B4CC;
+		border-radius: 3px;
+		margin-top: 15px;
+		padding: 8px 15px;
+	}
 }
