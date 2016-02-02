@@ -3,7 +3,13 @@
 	//Contact Form
 	//Open Contact Form
 	var $contact = $('#contact');
-	$('contactTrigger').click(function(){
+
+	$('.contactTrigger').click(function(e) {
+		e.preventDefault();
+		
+	});
+	
+	contact.click(function(){
 		$contact.addClass('open');
 	});
 	
