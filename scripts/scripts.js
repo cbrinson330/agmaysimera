@@ -1,5 +1,42 @@
 (function() {
 
+/*  $('#nav a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+
+    $('#nav a').each(function () {
+        $(this).removeClass('current');
+    });
+    $(this).addClass('current');
+
+    var target = this.hash,
+        menu = target;
+    $target = $(target);
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top-0
+    }, 1000, 'swing', function () {
+        window.location.hash = target;
+        $(document).on("scroll", onScroll);
+    });
+});
+
+});
+
+function onScroll(event){
+var scrollPos = $(document).scrollTop();
+$('#nav a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('#nav a').removeClass("current");
+        currLink.addClass("current");
+    }
+    else{
+        currLink.removeClass("current");
+    }
+}); */
+
+
 	//Contact Form
 	//Open Contact Form
 	var $contact = $('#contact');

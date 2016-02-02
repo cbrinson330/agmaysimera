@@ -10,9 +10,18 @@ header {
 
 	nav {
 		background: #fff;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 15px;
 		
 		a {
-			margin: 0 20px;
+			margin: 10px 20px 0 20px;
+      float: left;
 		}
+
+    .nav__logo {
+      margin: 0 15px;
+      float: left;
+    }
 	}
 }
