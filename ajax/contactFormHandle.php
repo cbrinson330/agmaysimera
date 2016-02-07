@@ -25,7 +25,7 @@
 		}
 
 		private function getEmailBody() {
-			$emailBody = $this->email ' has filled out the form on the website and says: \n';
+			$emailBody = $this->email . ' has filled out the form on the website and says: \n';
 			$emailBody .= $this->message;
 
 			return emailBody;

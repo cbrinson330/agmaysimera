@@ -13,7 +13,14 @@
 
 @import 'layout/layout';
 @import 'layout/header';
+@import 'layout/footer';
 
 @import 'components/contact';
 
 // @import 'pages/*';
+@import 'pages/intro';
+@import 'pages/bio';
+@import 'pages/affiliations';
+@import 'pages/join';
+@import 'pages/media';
+@import 'pages/publications';

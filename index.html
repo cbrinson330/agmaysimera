@@ -6,8 +6,11 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="styles/style.css"></link>
 
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 		<!-- Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'/>
 		<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	
@@ -16,24 +19,23 @@
 		<header>
 			<nav>
 				<img class="nav__logo" src="images/logo.png" width="200" alt="agmaysimera logo"/>
-				<a href="#">Intro</a>
-				<a href="#">Publications</a>
-				<a href="#">Team</a>
-				<a href="#">Media</a>
-				<a href="#">Join Us</a>
-				<a href="#">Afiliations</a>
+				<a href="intro">Intro</a>
+				<a href="publications">Publications</a>
+				<a href="team">Team</a>
+				<a href="join">Join Us</a>
+				<a href="media">Media</a>
+				<!-- <a href="affiliations">Afiliations</a> -->
 				<a id="contactNav" class="contactTrigger" href="#">Contact</a>
 			</nav>
 		</header>
 		<section class="main">
-			<div id="intro">
+			<div id="intro" class="block">
 				<img class="hero" />
-				<p class="header__intro">AG May-Simera is working on the stuff and is learning more about it every day! <a href="#">Find out more</a></p>
+				<p class="header__intro">Our research focuses on primary cilia, eyelash-like protrusions on the cell membrane. Like 'biological antennae', they receive information that is crucial to how cells develop. When cilia don't function it can lead to serious illnesses, called ciliopathies. Specifically we are looking into how cilia function in eye cells and how ciliopathy patients can be treated.</p>
+				<p class="intro__half">In recent years, primary cilia have emerged as unique and multifunctional organelles as well as having been implicated in a variety of cellular and developmental processes. Primary cilia are components of virtually all vertebrate cell types, which explains why primary cilia defects cause a spectrum of clinical phenotypes. Many human diseases have been associated with primary cilia dysfunction, collectively termed 'ciliopathies'. Bardet-Biedl syndrome (BBS) is one of the first human syndromes to be identified as being caused by primary cilia dysfunction. One of the hallmark symptoms of BBS and other ciliopathies is retinal degeneration. Till now, elucidation of disease mechanisms have focused on trafficking across the photoreceptor connecting cilium, which corresponds to the transition zone of a modified primary cilium; however, defects in other ciliated cell types in the eye may also be contributing to disease manifestation.</p>
+				<p class="intro__half">One of the first signaling pathways shown to be associated with the primary cilium is the wingless (Wnt) signaling pathway, which is known to regulate diverse processes during development, including cell fate, structural remodeling and cell polarity. Wnt signaling has been shown to be crucial for the development and function of the retinal pigment epithelium (RPE), a monolayer epithelium tightly associated with photoreceptors and critical for photoreceptor function and survival. Despite the well known close association of these two cell types, the potential contribution of RPE disruption to retinal degeneration has not, to date, been extensively considered. Concomitantly, studies into the ciliary regulation of Wnt signaling are predominantly restricted to in vitro based model systems with limited understanding in mammalian systems.</p>
 			</div><!-- /intro -->
-			<div id="media">
-				<!-- TODO setup link to videos -->
-			</div><!--/media -->
-			<div id="publications">
+			<div id="publications" class="block">
 				<h2>Publications</h2>
 				<ul class="publications">
 					<li class="publication">
@@ -101,42 +103,43 @@
 					</li>
 				</ul>
 			</div><!-- /team -->
-			<div id="team">
+			<div id="team" class="block">
 				<h2>Our Team</h2>
 				<div class="teamMember">
-					<h3 class="teamMember__name">Helen May-Simera<span class="teamMember__name-title">Principal Investigator</span></h3>
-					<img src="img/helen.png" />
-					<div class="temMemberBio">
-						<p>Some Fun bio stuff here</p>
+					<img class="teamMember__photo" src="images/helen_may-simera.jpg" width="200"/>
+					<h3 class="teamMember__name">Helen May-Simera <span class="teamMember__name-title">Principal Investigator</span></h3>
+					<div class="temMember__bio">
+						<p>Dr Helen May-Simera was born in Great Britain in 1981 and studied biochemistry at the University of Bath. After completing her Master’s degree in 2003 she was a doctoral student at University College London, where she obtained her doctorate in 2008. She then moved to the USA to conduct research as a postdoc at the National Institute of Health in Bethesda, initially at the National Institute on Deafness and Communication Disorders, and then later at the National Eye Institute. In 2014 she was awarded the Sofia Kovalevskaja award, allowing her to continuing her research at the University of Mainz as a young group leader.</p>
 					</div>
 				</div><!-- /teamMember -->
-				<!-- <div class="teamMember">
-					<h3 class="teamMember__name">Viola Kretschmer<span class="teamMember__name-title">Lab Manager</span></h3>
-					<img src="img/viola.png" />
-				</div>--><!-- /teamMember -->
-				<!-- <div class="teamMember">
-					<h3 class="teamMember__name">Viola Kretschmer<span class="teamMember__name-title">Lab Manager</span></h3>
-					<img src="img/helen.html" />
-				</div> --><!-- /teamMember --> 
 			</div><!-- /team -->
-			<div id="join">
+			<div id="join" class="block">
 				<h2>Join Us</h2>
-				<p>Join us and together we can rule the galaxy!</p>
-				<a class="contactTrigger" href="#">Get in touch</a><!-- /open sidebar contact form -->
+				<div class="job">
+					<p class="job__title"><strong>PhD position investigating the molecular basis of cilia and ciliopathies</strong><i class="icon-chevron-down"></i><i class="icon-chevron-up"></i></p>
+					<div class="job__description">
+						<p>Enthusiastic scientists with an interest in cilia biology, disease and translational medicine are invited to apply for a doctoral position in a newly established research group at the Johannes Gutenberg University, Mainz. The project will focus on the molecular mechanisms underlying retinal degeneration caused by cilia dysfunction, the role of Wnt signaling in the retinal pigment epithelium, and the evaluation of emerging treatment paradigms. The laboratory, led by Dr Helen May-Simera, a Sofja Kovalevskaja Awardee, works in close collaboration with top experts in the field. Applicants should have a Masters with extensive training in molecular biology, cell biology, and experience working with mouse models. The position is immediately available.</p>
+						<p>To apply, please send a cover letter, curriculum vitae, list of publications, contact information of three references and a personal statement describing research experience, current interests, and future goals to hmaysime@uni-mainz.de</p>
+					</div><!--/job__description -->
+				</div><!-- /job -->
 			</div><!-- /join -->
-
-			<div id="affiliations">
-				<a href="#" target="_blank"></a>
-				<a href="#" target="_blank"></a>
+			<div id="media" class="block">
+				<h2>Media</h2>
+				<p><i class="fa fa-video-camera"></i>&nbsp;<a target="_blank" href="https://www.youtube.com/watch?v=zb1r4HvoCNM&list=PLNol8zIT_P1A2v4NsB_sFKXzspTRUzp2S">Lab TV Profile: Helen May-Simera</a></p>
+				<p><i class="fa fa-video-camera"></i>&nbsp;<a target="_blank" href="https://www.youtube.com/watch?v=Wg8bMcLYs_Q">Mainz University Research</a></p>
+			</div>
+			<div id="affiliations" class="block affiliations">
+				<a href="http://www.lmbbs.org.uk" target="_blank"><img src="images/lmbbs-logo.png" width="250" alt="LMBBS Logo" height="150"/></a>
+				<a href="https://www.uni-mainz.de" target="_blank"><img src="images/jgu-logo.png" width="250" alt="Mainz University" height="150"/></a>
+				<a href="https://www.humboldt-foundation.de" target="_blank"><img src="images/alexander-logo.png" alt="alexander von humbolt" width="250" height="150"/></a>
 			</div><!-- /affiliations -->
 		</section>
 		<footer>
 			<p class="footer__copy">&copy; AGMay-Simera 2016</p>
-			<a class="footer__contact contactTrigger">Contact</a>
 		</footer>
 
 		<div id="contact" class="contact">
-			<a class="contact__close">X</a>
+			<a class="contact__close"><i class="fa fa-times"></i></a>
 				<div class="inputWrap">
 					<label>Name:</label>
 					<input type="text" id="name"/>

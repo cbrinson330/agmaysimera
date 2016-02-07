@@ -1,8 +1,7 @@
 .contact {
 	position: fixed;
-	top: 0;
+	top: 20px;
 	width: 250px;
-	//right: 20px;
 	right: -350px;
 	width: 350px;
 	background: #343838;
@@ -13,7 +12,11 @@
 	-webkit-transition: all, .5s;
 
 	&.open {
-		right: 20px;
+		right: 0px;
+	}
+
+	.message {
+		margin-top: 15px;
 	}
 
 	@media screen and (max-width:480) {
@@ -30,13 +33,23 @@
 
 	input, textarea {
 		width: 100%;
+		color: #333;
+		border: none;
+		padding: 8px;
+		-webkit-transition: background-color 0.5s;
+		transition: background-color 0.5s;
+
+		&.error {
+			background-color: red;
+			color: #fff;
+		}
 	}
 
 	.contact__close {
 		float: right;
-		font-weight: bold;
 		font-size: 16px;
-		color: #00B4cc;
+		cursor: pointer;
+		font-weight: bold;
 	}
 
 	button {

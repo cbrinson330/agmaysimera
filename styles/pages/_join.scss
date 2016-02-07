@@ -1,0 +1,23 @@
+.job{
+	width: 50%;
+	float: left;
+}
+
+.job__title {
+	cursor: pointer;
+	border: 1px solid #333;
+	padding: 3px;
+	border-radius: 5px;
+	
+	i{
+		margin-left: 5px;
+
+		&.icon-chevron-up {
+			display: none;
+		}
+	}
+}
+
+.job__description {
+	display: none;
+}

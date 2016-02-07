@@ -1,8 +1,5 @@
 body {
 	padding-top: 50px;
-	//border-left: 20px solid #343838;
-	//border-right: 20px solid #343838;
-	//border-bottom: 20px solid #343838;
 }
 
 .main {
@@ -10,4 +7,16 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	padding: 27px 15px 15px 15px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.block {
+	overflow: auto;
 }

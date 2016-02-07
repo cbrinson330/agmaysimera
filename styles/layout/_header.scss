@@ -17,6 +17,16 @@ header {
 		a {
 			margin: 10px 20px 0 20px;
       float: left;
+
+			&.current {
+				border-bottom: 2px solid #333;
+			}
+			&.contactTrigger {
+				border: 1px solid #333;
+				border-radius: 5px;
+				padding: 5px 10px;
+				margin-top: 3px;
+			}
 		}
 
     .nav__logo {
