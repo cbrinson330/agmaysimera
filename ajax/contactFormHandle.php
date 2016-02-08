@@ -27,7 +27,7 @@ header('Content-Type: application/json');
 		}
 
 		private function getEmailBody() {
-			$emailBody = $this->email . ' has filled out the form on the website and says: \n';
+			$emailBody = $this->email . ' has filled out the form on the website and says: ';
 			$emailBody .= $this->message;
 
 			return $emailBody;
@@ -62,6 +62,6 @@ header('Content-Type: application/json');
 		}
 	}
 
-	$formSub = new formHandle($_POST['name'], $_POST['email'], $_POST['message'], 'Message From Website Contact Form', 'cbrinson330@gmail.com');
+	$formSub = new formHandle($_POST['name'], $_POST['email'], $_POST['message'], 'Message From Website Contact Form', 'helenmaysimera@gmail.com');
 	$formSub->sendForm();
 ?>
