@@ -54,7 +54,11 @@ $(document).on("scroll", onScroll);
 		var windowHeight = $(document).height();
 		console.log(windowHeight);
 		$contact.css('height', windowHeight - 25 + 'px');
-		$contact.toggleClass('open');
+    $('.returnMessage').text('');
+		$('#name').removeClass('error');
+		$('#email').removeClass('error');
+		$('#message').removeClass('error');
+		$('#contact').toggleClass('open');
 	});
 	
 	//Close Contact Form
@@ -73,7 +77,8 @@ $(document).on("scroll", onScroll);
 		var errors = 0,
 				$name = $('#name'),
 				$email = $('#email'),
-				$message = $('#message');
+				$message = $('#message'),
+        $returnMessage = $('.returnMessage');
 
 		//init State
 		$name.removeClass('error');
@@ -104,10 +109,25 @@ $(document).on("scroll", onScroll);
 			$.post( "ajax/contactFormHandle.php", data)
   			.done(function( data ) {
 					console.log(data);
+          if (data.code === 200) {
+            $name.val('');
+            $email.val('');
+            $message.val('');
+            $returnMessage.text(data.message);
+            setTimeout(function(){ $('#contact').removeClass('open'); }, 1500);
+          }
+          else if(data.code === 400 && data.fieldError === 'email') {
+            $email.addClass('error');
+            $returnMessage.text(data.message);
+          }
+          else {
+            $returnMessage.text(data.message);
+          }
+
   			});
 		}
 		else {
-			$('.contact .message').text('Please complete all fileds');
+			$('.returnMessage').text('Please complete all fileds');
 		}
 	});
 	

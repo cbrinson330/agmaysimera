@@ -1,4 +1,5 @@
-<?php 
+<?php
+header('Content-Type: application/json');
 	class formHandle {
 		private $name;
 		private $email;
@@ -9,7 +10,8 @@
 		private $successMessage = 'Thank you for contacting us.';
 		private $emailErrorMessage = 'Please enter a valid email address.';
 		private $errorMessage = 'There was an issue sending your message. Please try again.';
-		private $returnMessage = array('message' => $this->errorMessage);
+		private $returnMessage;
+		private $returnCode;
 	
 		function __construct($nameInit, $emailInit, $messageInit, $subjectInit, $recipiantInit) {
 			$this->name = $nameInit;
@@ -20,7 +22,7 @@
 			$this->emailSent = false;
 		}
 
-		private function isVaidEmail() {
+		private function isValidEmail() {
 			return filter_var($this->email, FILTER_VALIDATE_EMAIL);
 		}
 
@@ -28,7 +30,7 @@
 			$emailBody = $this->email . ' has filled out the form on the website and says: \n';
 			$emailBody .= $this->message;
 
-			return emailBody;
+			return $emailBody;
 		}
 
 		private function printReturnMessage() {
@@ -39,16 +41,20 @@
 			if($this->isValidEmail()){
 				if(mail($this->recipiant, $this->subject, $this->getEmailBody())){
 					//Email Sent
-					$this->returnMessage['messsage'] = $this->successMessage;
+					$this->returnMessage['message'] = $this->successMessage;
+          $this->returnMessage['code'] = 200;
 				}
 				else {
 					//Email Not Sent
-					$this->returnMessage['messsage'] = $this->errorMessage;
+					$this->returnMessage['message'] = $this->errorMessage;
+          $this->returnMessage['code'] = 400;
 				}
 			}
 			else {
 				//not valid email
 				$this->returnMessage['message'] = $this->emailErrorMessage;
+        $this->returnMessage['fieldError'] = 'email';
+        $this->returnMessage['code'] = 400;
 			}
 		
 			//echo the return message 

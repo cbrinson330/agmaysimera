@@ -7,6 +7,7 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	padding: 27px 15px 15px 15px;
+  
 }
 
 .fl {
@@ -19,4 +20,12 @@ body {
 
 .block {
 	overflow: auto;
+}
+
+.half {
+  width: 48%;
+  float: left;
+  &:last-child{
+    margin-left: 2%;
+  }
 }
