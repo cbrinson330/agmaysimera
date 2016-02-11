@@ -1,11 +1,38 @@
-.publication{
-	width: 30%;
+.publications {
+	
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.publication {
+	width: 48%;
 	float: left;
-	height: 65px;
-	margin-left: 3px;
+	padding: 0;
+	list-style: none;
+	min-height: 250px;
+	
+	&:nth-child(even){
+		margin-left: 30px;
+	}
 }
 
 .publication__title {
 	display: block;	
 	font-weight: bold;
+}
+
+.publication__authors {
+	color: #777;
+	
+	strong{
+		color: #333;
+	}
+}
+
+.publication__journal {
+	display: block;
+	font-weight: bold;
+	padding-top: 10px;
 }
