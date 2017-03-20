@@ -12,6 +12,7 @@
 	-webkit-transition: all, .5s;
 
 	&.open {
+		z-index: 1000;
 		right: 0px;
 	}
 
