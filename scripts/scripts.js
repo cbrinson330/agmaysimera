@@ -45,6 +45,9 @@ $(document).on("scroll", onScroll);
 		});
 	});
 
+	//Update copy date
+	$("#footer__copyYear").text(new Date().getFullYear());
+
 	//Contact Form
 	var $contact = $('#contact');
 
