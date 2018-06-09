@@ -36,7 +36,8 @@ $('nav a').not('#contactNav').on('click', function (e) {
 $(document).on("scroll", onScroll);
 
 $(document).on('ready',function(){
-	$(".slide-work").lightSlider(); 
+	console.log('on Doc ready');
+	//$(".slide-work").lightSlider(); 
 	$(".slide-team").lightSlider(); 
 });
 
