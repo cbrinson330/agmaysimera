@@ -30,6 +30,15 @@ body {
   }
 }
 
+.half.last {
+	margin-left: 2%;
+}
+
+.full {
+	width: 100%;
+	clear: both;
+}
+
 @media (max-width: 900px) {
   .half {
 		width: 100%;

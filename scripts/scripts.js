@@ -35,6 +35,10 @@ $('nav a').not('#contactNav').on('click', function (e) {
 
 $(document).on("scroll", onScroll);
 
+$(document).on('ready',function(){
+	$(".slide-team").lightSlider(); 
+});
+
 (function() {
 	//Expando Collapso jobs posting
 	$('.job__title').on('click', function(e) {
@@ -133,5 +137,5 @@ $(document).on("scroll", onScroll);
 			$('.returnMessage').text('Please complete all fileds');
 		}
 	});
-	
+
 })()
