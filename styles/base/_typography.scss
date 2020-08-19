@@ -39,6 +39,11 @@ h3 {
   font-size: $font-size-h3;
 }
 
+h3.title {
+  text-transform: uppercase;
+  color: #666;
+}
+
 h4 {
   font-size: $font-size-h4;
 }

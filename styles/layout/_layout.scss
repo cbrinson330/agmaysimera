@@ -7,7 +7,7 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	padding: 27px 15px 15px 15px;
-  
+
 }
 
 .fl {
@@ -37,6 +37,16 @@ body {
 .full {
 	width: 100%;
 	clear: both;
+}
+
+.third {
+  margin-right: 2%;
+  width: 32%;
+  float: left;
+}
+
+.third.last {
+  margin-right: 0;
 }
 
 @media (max-width: 900px) {

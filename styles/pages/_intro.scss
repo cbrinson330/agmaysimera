@@ -19,3 +19,32 @@
   line-height: 1.75;
 	padding-top: 25px;
 }
+
+.introTxtWrap {
+  overflow: auto;
+}
+
+.intro-image-wrapper {
+  position: relative;
+  text-align: center;
+
+  p {
+    width: 190px;
+    position: absolute;
+  }
+
+  .theme1 {
+    top: 15%;
+    left: 15%;
+  }
+
+  .theme2 {
+    top: 25%;
+    right: 15%;
+  }
+
+  .theme3 {
+    top: 75%;
+    right: 62%;
+  }
+}

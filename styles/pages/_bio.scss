@@ -1,15 +1,3 @@
-.teamMember{
-
-}
-
-.teamMember__bio {
-
-}
-
-.teamMember__name {
-
-}
-
 .teamMember__name-title {
 	font-weight: normal;
 	display: block;
@@ -18,6 +6,22 @@
 .teamMember__photo {
 	float: left;
 	margin-right: 15px;
+}
+
+.alumni {
+  .teamMember__name {
+    color: #666;
+    font-weight: 400;
+  }
+}
+
+.teamWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  div:first-of-type {
+    flex-basis: 33%;
+  }
 }
 
 .slide-team-wrap {
