@@ -236,6 +236,9 @@ a {
   a:hover, a:active, a:focus {
     color: shade(#00B4cc, 15%); }
 
+.text-center {
+  text-align: center; }
+
 body {
   padding-top: 50px; }
 
