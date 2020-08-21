@@ -28,6 +28,10 @@
   position: relative;
   text-align: center;
 
+  img {
+    max-width: 50%;
+  }
+
   p {
     width: 190px;
     position: absolute;
@@ -35,16 +39,16 @@
 
   .theme1 {
     top: 15%;
-    left: 15%;
+    left: 4%;
   }
 
   .theme2 {
     top: 25%;
-    right: 15%;
+    right: 4%;
   }
 
   .theme3 {
     top: 75%;
-    right: 62%;
+    right: 72%;
   }
 }

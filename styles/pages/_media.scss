@@ -8,6 +8,16 @@
 	}
 }
 
+.link_wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  a {
+    margin: 15px;
+  }
+}
+
 .video {
 	display: inline-block;
 	margin: 2px;

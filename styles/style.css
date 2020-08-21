@@ -392,18 +392,20 @@ footer {
 .intro-image-wrapper {
   position: relative;
   text-align: center; }
+  .intro-image-wrapper img {
+    max-width: 50%; }
   .intro-image-wrapper p {
     width: 190px;
     position: absolute; }
   .intro-image-wrapper .theme1 {
     top: 15%;
-    left: 15%; }
+    left: 4%; }
   .intro-image-wrapper .theme2 {
     top: 25%;
-    right: 15%; }
+    right: 4%; }
   .intro-image-wrapper .theme3 {
     top: 75%;
-    right: 62%; }
+    right: 72%; }
 
 .teamMember__name-title {
   font-weight: normal;
@@ -426,6 +428,9 @@ footer {
 .slide-team-wrap {
   padding-top: 50px; }
 
+.teamMember_teamimg {
+  max-width: 100%; }
+
 .affiliations {
   text-align: center; }
   .affiliations a {
@@ -442,6 +447,13 @@ footer {
   margin-bottom: 55px; }
 .media .links {
   padding: 10px 0 30px 0; }
+
+.link_wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .link_wrapper a {
+    margin: 15px; }
 
 .video {
   display: inline-block;
